@@ -6,15 +6,18 @@
 //
 
 import Foundation
+import UIKit
 
 extension MealDetailViewController {
     
-    func updateUI() {
+    func updateUI(with size: CGSize) {
+        let isVertical = size.width < size.height
+        mealStackView.axis = isVertical ? .vertical : .horizontal
         title = meal.name
-//        imageView.con = meal.image
+        ImageView.image = meal.image
         mealRatindLable.text = meal.ratingBar
         mealNoteLable.text = meal.notes
-//        mealDateLable = meal.date
+        mealDateLable.text = meal.currentDate
         
     }
 }

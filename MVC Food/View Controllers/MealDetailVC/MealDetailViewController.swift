@@ -11,7 +11,8 @@ class MealDetailViewController: UIViewController {
 
     @IBOutlet var mealStackView: UIStackView!
     
-
+    @IBOutlet var ImageView: UIImageView!
+    
     
     @IBOutlet var mealRatindLable: UILabel!
     @IBOutlet var mealNoteLable: UILabel!
@@ -22,8 +23,14 @@ class MealDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        updateUI(with: view.bounds.size)
         
     }
-
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        updateUI(with: size)
+    }
 }
+
+

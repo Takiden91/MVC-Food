@@ -24,5 +24,14 @@ class MealViewController: UIViewController {
     }
 
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "ShowMealDetail" else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        
+        let meal = mealss[indexPath.row]
+        let mealDetailVC = segue.destination as! MealDetailViewController
+        mealDetailVC.meal = meal
+    }
 }
 

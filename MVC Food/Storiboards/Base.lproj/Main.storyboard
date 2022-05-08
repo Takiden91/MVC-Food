@@ -120,6 +120,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="p6a-48-Agf"/>
                     <connections>
+                        <outlet property="ImageView" destination="J1j-4d-qu2" id="L9v-U8-A5Q"/>
                         <outlet property="mealDateLable" destination="ilQ-x4-ucp" id="kTr-d2-cuZ"/>
                         <outlet property="mealNoteLable" destination="Ad6-Yq-htt" id="fmd-gS-oYs"/>
                         <outlet property="mealRatindLable" destination="U2I-Ek-s7f" id="cpa-lH-2z3"/>
